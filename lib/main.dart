@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-//プロバイダを定義
+//①状態を格納するためのプロバイダを定義
 final countProvider = StateProvider(((ref) => 0));
 
+//②ProviderScopeを設定する
 //Riverpodで状態管理するWidgetはProviderScopeで囲う
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//ConsumerWidgetでcounterProviderの値を参照できる
 class MyHomePage extends ConsumerWidget {
   const MyHomePage({super.key});
 
