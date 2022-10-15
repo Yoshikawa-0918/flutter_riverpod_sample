@@ -57,7 +57,7 @@ class MyHomePage extends ConsumerWidget {
                   ),
                 );
               },
-              child: const Icon(Icons.add),
+              child: const Text('次のページ'),
             ),
           ],
         ),
